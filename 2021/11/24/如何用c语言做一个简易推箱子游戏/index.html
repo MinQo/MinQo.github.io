@@ -6,21 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://MinQo.github.io">
-  <title>MinQo的blog</title>
+  <title>如何用c语言做一个简易推箱子游戏 | MinQo的blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MinQo的blog">
-<meta property="og:url" content="http://minqo.github.io/index.html">
+  <meta name="description" content="设计思路打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。 ###一.打印地图将空白，墙，角色，目标点设置为不同值，填充在二维数组中，再通过循环，将地图打印。###二.角色的移动在打印地图中，我们确定了角色的位置。所以要想让角色移动，得要让角色的坐标随输入的移动位置而相应的改变，然后再重新打印地图。(细节:定义新行、列的指针指向初始位置的地址，移动后新坐标的值改变–将初始坐标保">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何用c语言做一个简易推箱子游戏">
+<meta property="og:url" content="http://minqo.github.io/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/index.html">
 <meta property="og:site_name" content="MinQo的blog">
+<meta property="og:description" content="设计思路打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。 ###一.打印地图将空白，墙，角色，目标点设置为不同值，填充在二维数组中，再通过循环，将地图打印。###二.角色的移动在打印地图中，我们确定了角色的位置。所以要想让角色移动，得要让角色的坐标随输入的移动位置而相应的改变，然后再重新打印地图。(细节:定义新行、列的指针指向初始位置的地址，移动后新坐标的值改变–将初始坐标保">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://minqo.github.io/img/ditu.jpg">
+<meta property="og:image" content="http://minqo.github.io/img/dayin.jpg">
+<meta property="og:image" content="http://minqo.github.io/img/yidong.jpg">
+<meta property="og:image" content="http://minqo.github.io/img/yidongguocheng.jpg">
+<meta property="og:image" content="http://minqo.github.io/img/panduan.jpg">
+<meta property="og:image" content="http://minqo.github.io/img/caidan.jpg">
+<meta property="og:image" content="http://minqo.github.io/img/guanka.jpg">
+<meta property="og:image" content="http://minqo.github.io/img/jiegou.jpg">
+<meta property="og:image" content="http://minqo.github.io/img/1.jpg">
+<meta property="og:image" content="http://minqo.github.io/img/2.jpg">
+<meta property="article:published_time" content="2021-11-24T12:23:07.000Z">
+<meta property="article:modified_time" content="2021-11-24T14:14:21.777Z">
 <meta property="article:author" content="MinQo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://minqo.github.io/img/ditu.jpg">
   
     <link rel="alternative" href="/atom.xml" title="MinQo的blog" type="application/atom+xml">
   
@@ -250,25 +261,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-如何用c语言做一个简易推箱子游戏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-如何用c语言做一个简易推箱子游戏" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/" target="_blank">如何用c语言做一个简易推箱子游戏</a>
-  
+    <h1 class="article-title" itemprop="name">
+      如何用c语言做一个简易推箱子游戏
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/" class="archive-article-date">
         <time datetime="2021-11-24T12:23:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-24</time>
 </a>
@@ -276,6 +287,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">636字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -288,7 +320,59 @@
     
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>给我猛猛充钱<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/zhifubao.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/vxmoney.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          MinQo
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://MinQo.github.io/2021/11/24/如何用c语言做一个简易推箱子游戏/" title="如何用c语言做一个简易推箱子游戏" target="_blank">http://MinQo.github.io/2021/11/24/如何用c语言做一个简易推箱子游戏/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -298,16 +382,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://minqo.github.io/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/11/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E7%9A%84%E6%84%9F%E6%82%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一篇的感悟</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -328,94 +472,37 @@
 
 
 
-  
-    <article id="post-第一篇的感悟" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/11/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E7%9A%84%E6%84%9F%E6%82%9F/" target="_blank">第一篇的感悟</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2021/11/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E7%9A%84%E6%84%9F%E6%82%9F/" class="archive-article-date">
-        <time datetime="2021-11-24T10:58:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-24</time>
-</a>
 
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>待会再感悟</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/11/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E7%9A%84%E6%84%9F%E6%82%9F/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
   
+  <div id="gitment-ctn"></div>
   
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "如何用c语言做一个简易推箱子游戏" -->
+    var gitment = new Gitment({
+      id: "20211124202307",
+      owner: 'MinQo',
+      repo: 'https://github.com/MinQo/pinglun.git',
+      oauth: {
+        client_id: '306507bc6ab0fe812f39',
+        client_secret: 'caa5148b9076e7728cb06b0340a2a3283c179a5f',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
+  
+
 
 
           </div>
@@ -455,8 +542,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
