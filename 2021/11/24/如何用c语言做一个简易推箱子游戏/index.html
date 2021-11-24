@@ -10,12 +10,12 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="零.设计思路打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。 一.打印地图将空白，墙，角色，目标点设置为不同值，填充在二维数组中，再通过循环，将地图打印。&lt;–more–&gt; 二.角色的移动在打印地图中，我们确定了角色的位置。所以要想让角色移动，得要让角色的坐标随输入的移动位置而相应的改变，然后再重新打印地图。(细节:定义新行、列的指针指向初始位置的地址，移动后新坐标">
+  <meta name="description" content="零.设计思路打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。 一.打印地图将空白，墙，角色，目标点设置为不同值，填充在二维数组中，再通过循环，将地图打印。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何用c语言做一个简易推箱子游戏">
 <meta property="og:url" content="http://minqo.github.io/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/index.html">
 <meta property="og:site_name" content="MinQo的blog">
-<meta property="og:description" content="零.设计思路打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。 一.打印地图将空白，墙，角色，目标点设置为不同值，填充在二维数组中，再通过循环，将地图打印。&lt;–more–&gt; 二.角色的移动在打印地图中，我们确定了角色的位置。所以要想让角色移动，得要让角色的坐标随输入的移动位置而相应的改变，然后再重新打印地图。(细节:定义新行、列的指针指向初始位置的地址，移动后新坐标">
+<meta property="og:description" content="零.设计思路打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。 一.打印地图将空白，墙，角色，目标点设置为不同值，填充在二维数组中，再通过循环，将地图打印。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://minqo.github.io/img/ditu.jpg">
 <meta property="og:image" content="http://minqo.github.io/img/dayin.jpg">
@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://minqo.github.io/img/2.jpg">
 <meta property="og:image" content="http://minqo.github.io/img/3.gif">
 <meta property="article:published_time" content="2021-11-24T12:23:07.000Z">
-<meta property="article:modified_time" content="2021-11-24T15:20:46.261Z">
+<meta property="article:modified_time" content="2021-11-24T15:21:38.973Z">
 <meta property="article:author" content="MinQo">
 <meta property="article:tag" content="游戏 学习 实践">
 <meta name="twitter:card" content="summary">
@@ -296,7 +296,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">640字</span>
+      <span class="post-count">637字</span>
     </span>
   </span>
 
@@ -317,7 +317,7 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h3 id="零-设计思路"><a href="#零-设计思路" class="headerlink" title="零.设计思路"></a>零.设计思路</h3><p>打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。</p>
-<h3 id="一-打印地图"><a href="#一-打印地图" class="headerlink" title="一.打印地图"></a>一.打印地图</h3><p>将空白，墙，角色，目标点<strong>设置为不同值</strong>，填充在二维数组中，再通过循环，将地图打印。<br><img src="/img/ditu.jpg" alt="map"><br><img src="/img/dayin.jpg" alt="print"><br>&lt;–more–&gt;</p>
+<h3 id="一-打印地图"><a href="#一-打印地图" class="headerlink" title="一.打印地图"></a>一.打印地图</h3><p>将空白，墙，角色，目标点<strong>设置为不同值</strong>，填充在二维数组中，再通过循环，将地图打印。<br><img src="/img/ditu.jpg" alt="map"><br><img src="/img/dayin.jpg" alt="print"><span id="more"></span></p>
 <h3 id="二-角色的移动"><a href="#二-角色的移动" class="headerlink" title="二.角色的移动"></a>二.角色的移动</h3><p>在打印地图中，我们确定了角色的位置。所以要想让角色移动，得要让<strong>角色的坐标</strong>随输入的移动位置而<strong>相应的改变</strong>，然后再<strong>重新打印地图</strong>。(细节:定义新行、列的指针指向初始位置的地址，移动后新坐标的值改变–将初始坐标保存)<br><img src="/img/yidong.jpg" alt="move"></p>
 <h3 id="三-移动过程中的各种情况"><a href="#三-移动过程中的各种情况" class="headerlink" title="三.移动过程中的各种情况"></a>三.移动过程中的各种情况</h3><h4 id="1-移动方向为墙或者目标点"><a href="#1-移动方向为墙或者目标点" class="headerlink" title="1.移动方向为墙或者目标点"></a>1.移动方向为墙或者目标点</h4><h5 id="输出禁止前行-坐标不改变"><a href="#输出禁止前行-坐标不改变" class="headerlink" title="输出禁止前行/坐标不改变"></a>输出禁止前行/坐标不改变</h5><h4 id="2-移动的目标点是空白"><a href="#2-移动的目标点是空白" class="headerlink" title="2.移动的目标点是空白"></a>2.移动的目标点是空白</h4><h5 id="角色对应的值赋值给新坐标，空白的值赋给人的原坐标，再把新坐标赋值给原坐标-新一轮的坐标替换"><a href="#角色对应的值赋值给新坐标，空白的值赋给人的原坐标，再把新坐标赋值给原坐标-新一轮的坐标替换" class="headerlink" title="角色对应的值赋值给新坐标，空白的值赋给人的原坐标，再把新坐标赋值给原坐标(新一轮的坐标替换)"></a>角色对应的值赋值给新坐标，空白的值赋给人的原坐标，再把新坐标赋值给原坐标(<strong>新一轮的坐标替换</strong>)</h5><h4 id="3-移动的目标点是箱子"><a href="#3-移动的目标点是箱子" class="headerlink" title="3.移动的目标点是箱子"></a>3.移动的目标点是箱子</h4><h5 id="将新坐标的值赋值给下一个坐标，移动角色，下一个坐标-箱子的坐标-对应改变"><a href="#将新坐标的值赋值给下一个坐标，移动角色，下一个坐标-箱子的坐标-对应改变" class="headerlink" title="将新坐标的值赋值给下一个坐标，移动角色，下一个坐标(箱子的坐标)对应改变"></a>将新坐标的值赋值给下一个坐标，移动角色，下一个坐标(箱子的坐标)对应改变</h5><h5 id="①-改变的位置是墙或箱子"><a href="#①-改变的位置是墙或箱子" class="headerlink" title="①.改变的位置是墙或箱子"></a>①.改变的位置是墙或箱子</h5><h6 id="输出移动不了"><a href="#输出移动不了" class="headerlink" title="输出移动不了"></a>输出移动不了</h6><h5 id="②-改变的位置是空白"><a href="#②-改变的位置是空白" class="headerlink" title="②.改变的位置是空白"></a>②.改变的位置是空白</h5><h6 id="箱子的值赋给改变后的坐标，角色的值赋给箱子的坐标，空白的值赋给原坐标的指针，再原坐标指针指向角色的位置坐标-保证指针一直指向角色位置的坐标"><a href="#箱子的值赋给改变后的坐标，角色的值赋给箱子的坐标，空白的值赋给原坐标的指针，再原坐标指针指向角色的位置坐标-保证指针一直指向角色位置的坐标" class="headerlink" title="箱子的值赋给改变后的坐标，角色的值赋给箱子的坐标，空白的值赋给原坐标的指针，再原坐标指针指向角色的位置坐标(保证指针一直指向角色位置的坐标)"></a>箱子的值赋给改变后的坐标，角色的值赋给箱子的坐标，空白的值赋给原坐标的指针，再原坐标指针指向角色的位置坐标(保证<strong>指针一直指向角色位置的坐标</strong>)</h6><h5 id="③-改变的位置是目标点"><a href="#③-改变的位置是目标点" class="headerlink" title="③.改变的位置是目标点"></a>③.改变的位置是目标点</h5><h6 id="在②中，目标点坐标对应的值将被箱子的值覆盖，不需设置额外变量计算目标点个数-在重新打印地图中计算目标点的值的个数"><a href="#在②中，目标点坐标对应的值将被箱子的值覆盖，不需设置额外变量计算目标点个数-在重新打印地图中计算目标点的值的个数" class="headerlink" title="在②中，目标点坐标对应的值将被箱子的值覆盖，不需设置额外变量计算目标点个数(在重新打印地图中计算目标点的值的个数)"></a>在②中，目标点坐标对应的值将被箱子的值<strong>覆盖</strong>，不需设置额外变量计算目标点个数(在重新打印地图中计算目标点的值的个数)</h6><p><img src="/img/yidongguocheng.jpg" alt="guocheng"></p>
 <h3 id="四-判断"><a href="#四-判断" class="headerlink" title="四.判断"></a>四.判断</h3><h4 id="先对地图做一次循环，确定目标点的个数，并赋值给一个变量，当这个这个变量为0时，游戏胜利。-在移动中可设置一个输入值为认输"><a href="#先对地图做一次循环，确定目标点的个数，并赋值给一个变量，当这个这个变量为0时，游戏胜利。-在移动中可设置一个输入值为认输" class="headerlink" title="先对地图做一次循环，确定目标点的个数，并赋值给一个变量，当这个这个变量为0时，游戏胜利。(在移动中可设置一个输入值为认输)"></a>先对地图做一次循环，确定目标点的个数，并赋值给一个变量，当这个这个<strong>变量为0</strong>时，游戏胜利。(在移动中可设置一个输入值为认输)</h4><p><img src="/img/panduan.jpg" alt="judge"></p>
