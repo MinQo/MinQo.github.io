@@ -465,31 +465,30 @@
 
 
 
-  <div id="giteement-ctn"></div>
+
   
-    <link rel="stylesheet" href="/lib/default.css">
-    <script src="/lib/giteement.browser.js"></script>
+  <div id="gitment-ctn"></div>
+  
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
   
   <script>
-  <!-- id: "Hello World" -->
-  var giteement = new Giteement({
-    id: '20211124112759',
-    owner: 'MinQo',
-    repo: 'Minq',
-    backcall_uri: 'https://minqo.github.io/',
-    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
-    oauth: {
-      client_id: 'eb595a2e98bd2fecdcc6197bc7143c64bac544df373c197983753cfda804b9c6',
-      client_secret: '91c8ef38ebf4db1bb815fccdfd4e54cdcc531c5e455b8889dc454ad157436217'
-    },
-  })
-  giteement.render('giteement-ctn')
+    <!-- id: "Hello World" -->
+    var gitment = new Gitment({
+      id: "20211124112759",
+      owner: 'MinQo',
+      repo: 'minqo',
+      oauth: {
+        client_id: '306507bc6ab0fe812f39',
+        client_secret: 'caa5148b9076e7728cb06b0340a2a3283c179a5f',
+      },
+    })
+    gitment.render('gitment-ctn')
   </script>
 
 
-
-
-
+  
 
 
 
