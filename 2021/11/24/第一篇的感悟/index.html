@@ -482,30 +482,31 @@
 
 
 
-
+  <div id="giteement-ctn"></div>
   
-  <div id="gitment-ctn"></div>
-  
-    <!-- 中文 -->
-    <link rel="stylesheet" href="/lib/gitment.css">
-    <script src="/lib/gitment.js"></script>
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
   
   <script>
-    <!-- id: "第一篇的感悟" -->
-    var gitment = new Gitment({
-      id: "20211124185853",
-      owner: 'MinQo',
-      repo: 'https://github.com/MinQo/pinglun.git',
-      oauth: {
-        client_id: '306507bc6ab0fe812f39',
-        client_secret: 'caa5148b9076e7728cb06b0340a2a3283c179a5f',
-      },
-    })
-    gitment.render('gitment-ctn')
+  <!-- id: "第一篇的感悟" -->
+  var giteement = new Giteement({
+    id: '20211124185853',
+    owner: 'MinQo',
+    repo: 'pinglun',
+    backcall_uri: 'https://minqo.github.io/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: 'd532153c88bb72559161c679c7301dcbf88dd859fecc75fa71c63ea457862b2a',
+      client_secret: 'fd5dee7029a16debc889485fa8143365f35b411eb255a644a9194c541bfc183c'
+    },
+  })
+  giteement.render('giteement-ctn')
   </script>
 
 
-  
+
+
+
 
 
 
@@ -834,6 +835,35 @@
   </div>
 
   
+<script type="text/javascript" src="/plugins/TweenMax/TweenMax.min.js"></script>
+<script type="text/javascript" src="/plugins/TweenMax/HoverImg.js"></script>
+
+<script>
+
+
+  var hoverEffect = {
+    "subNav": ".left-col .social a"
+  }
+
+
+  for (var x in hoverEffect) {
+    // 初始化data-img属性值
+    let $em = document.querySelectorAll(hoverEffect[x]);
+    $em.forEach(($a) => {
+      //console.log($a.href);
+      if (isImageType($a.href)) {
+        $a.setAttribute("data-img", $a.href)
+      }
+    })
+    // 实现悬停元素预览图片效果
+    let $a = document.querySelectorAll(hoverEffect[x] + "[data-img]");
+    $a.forEach(($em) => {
+      new HoverImgFx1($em)
+    })
+  }
+
+</script>
+
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>
