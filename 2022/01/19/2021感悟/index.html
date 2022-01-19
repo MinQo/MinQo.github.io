@@ -6,36 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://MinQo.github.io">
-  <title>如何用c语言做一个简易推箱子游戏 | MinQo的blog</title>
+  <title>2021-总结 | MinQo的blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="零.设计思路打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。 一.打印地图将空白，墙，角色，目标点设置为不同值，填充在二维数组中，再通过循环，将地图打印。">
+  <meta name="description" content="序每一年都感觉过的特别快，但仔细去回忆这一年，却又发现太多太多的事都发生在这一年。我是一个不擅长记录的人，所以当写这篇总结的时候，我发现真的很多事都无迹可寻，只有在记忆里的一点印象。希望在以后的空余时间可以用些时间来记录当下。 前半年学习&amp;生活">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何用c语言做一个简易推箱子游戏">
-<meta property="og:url" content="http://minqo.github.io/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/index.html">
+<meta property="og:title" content="2021-总结">
+<meta property="og:url" content="http://minqo.github.io/2022/01/19/2021%E6%84%9F%E6%82%9F/index.html">
 <meta property="og:site_name" content="MinQo的blog">
-<meta property="og:description" content="零.设计思路打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。 一.打印地图将空白，墙，角色，目标点设置为不同值，填充在二维数组中，再通过循环，将地图打印。">
+<meta property="og:description" content="序每一年都感觉过的特别快，但仔细去回忆这一年，却又发现太多太多的事都发生在这一年。我是一个不擅长记录的人，所以当写这篇总结的时候，我发现真的很多事都无迹可寻，只有在记忆里的一点印象。希望在以后的空余时间可以用些时间来记录当下。 前半年学习&amp;生活">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://minqo.github.io/img/ditu.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/dayin.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/yidong.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/yidongguocheng.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/panduan.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/caidan.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/guanka.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/jiegou.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/3.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/2.jpg">
-<meta property="og:image" content="http://minqo.github.io/img/3.gif">
-<meta property="article:published_time" content="2021-11-24T12:23:07.000Z">
-<meta property="article:modified_time" content="2021-11-25T06:57:20.489Z">
+<meta property="og:image" content="http://minqo.github.io/img/ba40adad497d8b807f1b6a2202ce293.jpg">
+<meta property="article:published_time" content="2022-01-19T01:25:23.000Z">
+<meta property="article:modified_time" content="2022-01-19T01:50:42.728Z">
 <meta property="article:author" content="MinQo">
-<meta property="article:tag" content="学习">
-<meta property="article:tag" content="游戏">
-<meta property="article:tag" content="实践">
+<meta property="article:tag" content="感悟">
+<meta property="article:tag" content="总结">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://minqo.github.io/img/ditu.jpg">
+<meta name="twitter:image" content="http://minqo.github.io/img/ba40adad497d8b807f1b6a2202ce293.jpg">
   
     <link rel="alternative" href="/atom.xml" title="MinQo的blog" type="application/atom+xml">
   
@@ -262,14 +251,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-如何用c语言做一个简易推箱子游戏" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2021感悟" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      如何用c语言做一个简易推箱子游戏
+      2021-总结
     </h1>
   
 
@@ -281,8 +270,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/" class="archive-article-date">
-        <time datetime="2021-11-24T12:23:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-24</time>
+<a href="/2022/01/19/2021%E6%84%9F%E6%82%9F/" class="archive-article-date">
+        <time datetime="2022-01-19T01:25:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-19</time>
 </a>
 
   
@@ -295,7 +284,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">637字</span>
+      <span class="post-count">113字</span>
     </span>
   </span>
 
@@ -304,7 +293,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -315,18 +304,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h3 id="零-设计思路"><a href="#零-设计思路" class="headerlink" title="零.设计思路"></a>零.设计思路</h3><p>打印地图，通过移动角色将箱子推到目标点，当图中箱子数为0时，游戏胜利。</p>
-<h3 id="一-打印地图"><a href="#一-打印地图" class="headerlink" title="一.打印地图"></a>一.打印地图</h3><p>将空白，墙，角色，目标点<strong>设置为不同值</strong>，填充在二维数组中，再通过循环，将地图打印。<br><img src="/img/ditu.jpg" alt="map"></p>
-<span id="more"></span>
-<p><img src="/img/dayin.jpg" alt="print"></p>
-<h3 id="二-角色的移动"><a href="#二-角色的移动" class="headerlink" title="二.角色的移动"></a>二.角色的移动</h3><p>在打印地图中，我们确定了角色的位置。所以要想让角色移动，得要让<strong>角色的坐标</strong>随输入的移动位置而<strong>相应的改变</strong>，然后再<strong>重新打印地图</strong>。(细节:定义新行、列的指针指向初始位置的地址，移动后新坐标的值改变–将初始坐标保存)<br><img src="/img/yidong.jpg" alt="move"></p>
-<h3 id="三-移动过程中的各种情况"><a href="#三-移动过程中的各种情况" class="headerlink" title="三.移动过程中的各种情况"></a>三.移动过程中的各种情况</h3><h4 id="1-移动方向为墙或者目标点"><a href="#1-移动方向为墙或者目标点" class="headerlink" title="1.移动方向为墙或者目标点"></a>1.移动方向为墙或者目标点</h4><h5 id="输出禁止前行-坐标不改变"><a href="#输出禁止前行-坐标不改变" class="headerlink" title="输出禁止前行/坐标不改变"></a>输出禁止前行/坐标不改变</h5><h4 id="2-移动的目标点是空白"><a href="#2-移动的目标点是空白" class="headerlink" title="2.移动的目标点是空白"></a>2.移动的目标点是空白</h4><h5 id="角色对应的值赋值给新坐标，空白的值赋给人的原坐标，再把新坐标赋值给原坐标-新一轮的坐标替换"><a href="#角色对应的值赋值给新坐标，空白的值赋给人的原坐标，再把新坐标赋值给原坐标-新一轮的坐标替换" class="headerlink" title="角色对应的值赋值给新坐标，空白的值赋给人的原坐标，再把新坐标赋值给原坐标(新一轮的坐标替换)"></a>角色对应的值赋值给新坐标，空白的值赋给人的原坐标，再把新坐标赋值给原坐标(<strong>新一轮的坐标替换</strong>)</h5><h4 id="3-移动的目标点是箱子"><a href="#3-移动的目标点是箱子" class="headerlink" title="3.移动的目标点是箱子"></a>3.移动的目标点是箱子</h4><h5 id="将新坐标的值赋值给下一个坐标，移动角色，下一个坐标-箱子的坐标-对应改变"><a href="#将新坐标的值赋值给下一个坐标，移动角色，下一个坐标-箱子的坐标-对应改变" class="headerlink" title="将新坐标的值赋值给下一个坐标，移动角色，下一个坐标(箱子的坐标)对应改变"></a>将新坐标的值赋值给下一个坐标，移动角色，下一个坐标(箱子的坐标)对应改变</h5><h5 id="①-改变的位置是墙或箱子"><a href="#①-改变的位置是墙或箱子" class="headerlink" title="①.改变的位置是墙或箱子"></a>①.改变的位置是墙或箱子</h5><h6 id="输出移动不了"><a href="#输出移动不了" class="headerlink" title="输出移动不了"></a>输出移动不了</h6><h5 id="②-改变的位置是空白"><a href="#②-改变的位置是空白" class="headerlink" title="②.改变的位置是空白"></a>②.改变的位置是空白</h5><h6 id="箱子的值赋给改变后的坐标，角色的值赋给箱子的坐标，空白的值赋给原坐标的指针，再原坐标指针指向角色的位置坐标-保证指针一直指向角色位置的坐标"><a href="#箱子的值赋给改变后的坐标，角色的值赋给箱子的坐标，空白的值赋给原坐标的指针，再原坐标指针指向角色的位置坐标-保证指针一直指向角色位置的坐标" class="headerlink" title="箱子的值赋给改变后的坐标，角色的值赋给箱子的坐标，空白的值赋给原坐标的指针，再原坐标指针指向角色的位置坐标(保证指针一直指向角色位置的坐标)"></a>箱子的值赋给改变后的坐标，角色的值赋给箱子的坐标，空白的值赋给原坐标的指针，再原坐标指针指向角色的位置坐标(保证<strong>指针一直指向角色位置的坐标</strong>)</h6><h5 id="③-改变的位置是目标点"><a href="#③-改变的位置是目标点" class="headerlink" title="③.改变的位置是目标点"></a>③.改变的位置是目标点</h5><h6 id="在②中，目标点坐标对应的值将被箱子的值覆盖，不需设置额外变量计算目标点个数-在重新打印地图中计算目标点的值的个数"><a href="#在②中，目标点坐标对应的值将被箱子的值覆盖，不需设置额外变量计算目标点个数-在重新打印地图中计算目标点的值的个数" class="headerlink" title="在②中，目标点坐标对应的值将被箱子的值覆盖，不需设置额外变量计算目标点个数(在重新打印地图中计算目标点的值的个数)"></a>在②中，目标点坐标对应的值将被箱子的值<strong>覆盖</strong>，不需设置额外变量计算目标点个数(在重新打印地图中计算目标点的值的个数)</h6><p><img src="/img/yidongguocheng.jpg" alt="guocheng"></p>
-<h3 id="四-判断"><a href="#四-判断" class="headerlink" title="四.判断"></a>四.判断</h3><h4 id="先对地图做一次循环，确定目标点的个数，并赋值给一个变量，当这个这个变量为0时，游戏胜利。-在移动中可设置一个输入值为认输"><a href="#先对地图做一次循环，确定目标点的个数，并赋值给一个变量，当这个这个变量为0时，游戏胜利。-在移动中可设置一个输入值为认输" class="headerlink" title="先对地图做一次循环，确定目标点的个数，并赋值给一个变量，当这个这个变量为0时，游戏胜利。(在移动中可设置一个输入值为认输)"></a>先对地图做一次循环，确定目标点的个数，并赋值给一个变量，当这个这个<strong>变量为0</strong>时，游戏胜利。(在移动中可设置一个输入值为认输)</h4><p><img src="/img/panduan.jpg" alt="judge"></p>
-<h3 id="五-优化"><a href="#五-优化" class="headerlink" title="五.优化"></a>五.优化</h3><h4 id="1-设置一个菜单，让玩家进行选择"><a href="#1-设置一个菜单，让玩家进行选择" class="headerlink" title="1.设置一个菜单，让玩家进行选择"></a>1.设置一个菜单，让玩家进行选择</h4><p><img src="/img/caidan.jpg" alt="menu"></p>
-<h4 id="2-设置多关卡"><a href="#2-设置多关卡" class="headerlink" title="2.设置多关卡"></a>2.设置多关卡</h4><p><img src="/img/guanka.jpg" alt="guanka"></p>
-<h4 id="3-利用函数，结构清晰"><a href="#3-利用函数，结构清晰" class="headerlink" title="3.利用函数，结构清晰"></a>3.利用函数，结构清晰</h4><p><img src="/img/jiegou.jpg" alt="jiegou"></p>
-<h3 id="六-问题"><a href="#六-问题" class="headerlink" title="六.问题"></a>六.问题</h3><h4 id="1-地图需要自己排版"><a href="#1-地图需要自己排版" class="headerlink" title="1.地图需要自己排版"></a>1.地图需要自己排版</h4><h4 id="2-关卡需要自己设计，每次加一个关卡都要重写一个函数"><a href="#2-关卡需要自己设计，每次加一个关卡都要重写一个函数" class="headerlink" title="2.关卡需要自己设计，每次加一个关卡都要重写一个函数"></a>2.关卡需要自己设计，每次加一个关卡都要重写一个函数</h4><h4 id="3-游戏单调，无音效，图片特效。"><a href="#3-游戏单调，无音效，图片特效。" class="headerlink" title="3.游戏单调，无音效，图片特效。"></a>3.游戏单调，无音效，图片特效。</h4><h3 id="七-所学"><a href="#七-所学" class="headerlink" title="七.所学"></a>七.所学</h3><h4 id="1-学习了大程序的函数结构布局，让代码清晰"><a href="#1-学习了大程序的函数结构布局，让代码清晰" class="headerlink" title="1.学习了大程序的函数结构布局，让代码清晰"></a>1.学习了大程序的函数结构布局，让代码清晰</h4><h4 id="2-学习了-getch-、exit-0-、system-“cls”-、等新知识"><a href="#2-学习了-getch-、exit-0-、system-“cls”-、等新知识" class="headerlink" title="2.学习了_getch()、exit(0)、system(“cls”)、等新知识"></a>2.学习了_getch()、exit(0)、system(“cls”)、等新知识</h4><h4 id="3-c语言代码的新用法"><a href="#3-c语言代码的新用法" class="headerlink" title="3.c语言代码的新用法"></a>3.c语言代码的新用法</h4><h3 id="八-游戏实况"><a href="#八-游戏实况" class="headerlink" title="八.游戏实况"></a>八.游戏实况</h3><p><img src="/img/3.jpg" alt="shikuang"><br><img src="/img/2.jpg" alt="shikuang"><br><img src="/img/3.gif" alt="shikuang"></p>
-
+    <h3 id="序"><a href="#序" class="headerlink" title="序"></a>序</h3><p>每一年都感觉过的特别快，但仔细去回忆这一年，却又发现太多太多的事都发生在这一年。我是一个不擅长记录的人，所以当写这篇总结的时候，我发现真的很多事都无迹可寻，只有在记忆里的一点印象。希望在以后的空余时间可以用些时间来记录当下。<br><img src="/img/ba40adad497d8b807f1b6a2202ce293.jpg" alt="jing"></p>
+<h3 id="前半年学习-amp-生活"><a href="#前半年学习-amp-生活" class="headerlink" title="前半年学习&amp;生活"></a>前半年学习&amp;生活</h3>
     
 
     
@@ -372,7 +351,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://MinQo.github.io/2021/11/24/如何用c语言做一个简易推箱子游戏/" title="如何用c语言做一个简易推箱子游戏" target="_blank">http://MinQo.github.io/2021/11/24/如何用c语言做一个简易推箱子游戏/</a>
+          <a href="http://MinQo.github.io/2022/01/19/2021感悟/" title="2021-总结" target="_blank">http://MinQo.github.io/2022/01/19/2021感悟/</a>
         </li>
         
         <li>
@@ -394,15 +373,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">实践</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
         		</li>
       		
 		</ul>
@@ -458,7 +433,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://minqo.github.io/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://minqo.github.io/2022/01/19/2021%E6%84%9F%E6%82%9F/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -473,7 +448,7 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/01/19/2021%E6%84%9F%E6%82%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/01/19/2021%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -483,8 +458,8 @@
     </a>
   
   
-    <a href="/2021/11/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E7%9A%84%E6%84%9F%E6%82%9F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一篇的感悟</div>
+    <a href="/2021/11/24/%E5%A6%82%E4%BD%95%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%81%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E6%8E%A8%E7%AE%B1%E5%AD%90%E6%B8%B8%E6%88%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何用c语言做一个简易推箱子游戏</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -525,9 +500,9 @@
     <script src="/lib/gitment.js"></script>
   
   <script>
-    <!-- id: "如何用c语言做一个简易推箱子游戏" -->
+    <!-- id: "2021-总结" -->
     var gitment = new Gitment({
-      id: "20211124202307",
+      id: "20220119092523",
       owner: 'MinQo',
       repo: 'https://github.com/MinQo/pinglun.git',
       oauth: {
