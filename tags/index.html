@@ -42,35 +42,7 @@ function loadWordcloud() {
   }
 }
 
-loadWordcloud();</script></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>要不要和我说些什么？</span><br></div><div id="disqus_thread"></div><script>const disqusConfig = function() {
-  this.page.url = "http://minqo.github.io/tags/index.html"; // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = "tags/index.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  this.page.title = "标签";
-};
-function loadDisqus() {
-  // here we will only load the disqus <script> if not already loaded
-  if (!window.DISQUS) {
-    (function() {
-      // DON'T EDIT BELOW THIS LINE
-      const d = document,
-        s = d.createElement("script");
-      s.src = "https://yunyoujun.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  }
-  // if disqus <script> is already loaded, we just reset disqus the right way
-  // see https://help.disqus.com/developer/using-disqus-on-ajax-sites
-  else {
-    DISQUS.reset({
-      reload: true,
-      config: function() {
-        this.page.identifier = disqusConfig.page.identifier;
-        this.page.url = disqusConfig.page.url;
-      },
-    });
-  }
-}</script><script src="/js/comments/disqus.js"></script><script id="dsq-count-scr" src="//yunyoujun.disqus.com/count.js" async></script><div id="valine-container"></div><script>Yun.utils.getScript("https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js", () => {
+loadWordcloud();</script></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>要不要和我说些什么？</span><br></div><div id="valine-container"></div><script>Yun.utils.getScript("https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js", () => {
   const valineConfig = {"enable":true,"appId":"RQn6nTis5CrBmeCpqJtmtC6c-gzGzoHsz","appKey":"eWotttCaGgiYH6FCuP1lglkg","placeholder":"在这里评论~","avatar":null,"meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":true,"highlight":true,"recordIP":false,"enableQQ":true,"el":"#valine-container"}
   valineConfig.path = "/tags/index.html"
   new Valine(valineConfig)
